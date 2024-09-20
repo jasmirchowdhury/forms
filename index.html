@@ -1,36 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Replit</title>
-    <link href="style.css" rel="stylesheet">
+    <title>Personal Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .form-container {
+            width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .form-group input[type="radio"] {
+            width: auto;
+        }
+        
+        .form-group .radio-label {
+            margin-right: 15px;
+        }
+        
+        .form-group .form-submit {
+            text-align: center;
+        }
+        
+        .form-group button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Pesonal Detail Form</h1>
-    <form>
-        <lable>Name</lable><b>
-        <input type="text" id="name"><br> 
-        <br><lable>Email</lable><b>
-        <input type="text" id="name"><br> <br><lable>Contact number</lable>
-        <b><input type="text" id="name"><br> <br>
-        <lable>Gender</lable><br>
-        <input type="radio" id="female" name="gender"
-        value="female">Female<br>
-        <input type="radio" id="male" name="gender" value="male">male<br><br>
 
-        <label> Favvorite city</label>
-        <input type="checkbox" id="city" value="Dhaka">Dhaka<br>
-        <input type="checkbox" id="city" value="Rajahahi">Rajshahi<br><br>
-        <input type="submit">
+    <div class="form-container">
+        <h2>Personal Information Form</h2>
+        <form action="#" method="POST">
 
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
 
-                    
-                    
-                   
-</form>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label>Gender:</label>
+                <label class="radio-label"><input type="radio" name="gender" value="male"> Male</label>
+                <label class="radio-label"><input type="radio" name="gender" value="female"> Female</label>
+                <label class="radio-label"><input type="radio" name="gender" value="other"> Other</label>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Home Address:</label>
+                <input type="text" id="address" name="address" required placeholder="Street Address">
+            </div>
+
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+
+            <div class="form-group">
+                <label for="state">State/Province:</label>
+                <input type="text" id="state" name="state" required>
+            </div>
+
+            <div class="form-group">
+                <label for="zip">Zip/Postal Code:</label>
+                <input type="text" id="zip" name="zip" required>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" required>
+            </div>
+
+            <div class="form-group">
+                <label for="emergency-name">Emergency Contact Full Name:</label>
+                <input type="text" id="emergency-name" name="emergency-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="emergency-phone">Emergency Contact Phone Number:</label>
+                <input type="tel" id="emergency-phone" name="emergency-phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="emergency-relationship">Relationship:</label>
+                <input type="text" id="emergency-relationship" name="emergency-relationship" required>
+            </div>
+
+            <div class="form-group form-submit">
+                <button type="submit">Submit</button>
+            </div>
+
+        </form>
+    </div>
+
 </body>
 
 </html>
